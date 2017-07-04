@@ -13,6 +13,7 @@
 #import <React/RCTRootView.h>
 
 @implementation AppDelegate
+RCT_EXPORT_MODULE()
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -32,6 +33,12 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
+}
+
+RCT_EXPORT_METHOD(pushWebView){
+  UIViewController *newVc = [[UIViewController alloc] initWithNibName:@"new vc" bundle:nil];
+  [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:newVc animated:YES completion:nil];
+  NSLog(@"Open a Webview");
 }
 
 @end

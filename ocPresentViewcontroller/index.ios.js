@@ -6,48 +6,37 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+	AppRegistry,
+	StyleSheet,
+	Text,
+	View,
+	NativeModules,
+	TouchableOpacity,
 } from 'react-native';
 
 export default class ocPresentViewcontroller extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
+	_onPress(){
+		NativeModules.AppDelegate.pushWebView()
+	}
+	render() {
+		return (
+			<View style={styles.container}>
+				<TouchableOpacity onPress={this._onPress}>
+					<Text>Open the Webview</Text>
+				</TouchableOpacity>
+			</View>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#F5FCFF',
+	},
+
 });
 
 AppRegistry.registerComponent('ocPresentViewcontroller', () => ocPresentViewcontroller);
