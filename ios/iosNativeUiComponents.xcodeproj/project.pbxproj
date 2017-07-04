@@ -35,6 +35,7 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* iosNativeUiComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* iosNativeUiComponentsTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		6589F19A1F0B2B6D001EF00A /* EGOMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6589F1991F0B2B6D001EF00A /* EGOMap.m */; };
 		658E56EB1F09E565006093CA /* EGOMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 658E56EA1F09E565006093CA /* EGOMapManager.m */; };
 		658E570F1F0A300D006093CA /* RCTConvert+ECoreLocation+EMapkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 658E570E1F0A300D006093CA /* RCTConvert+ECoreLocation+EMapkit.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -269,6 +270,9 @@
 		2D02E47B1E0B4A5D006451C7 /* iosNativeUiComponents-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosNativeUiComponents-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* iosNativeUiComponents-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iosNativeUiComponents-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6589F1981F0B2B5B001EF00A /* EGOMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGOMap.h; sourceTree = "<group>"; };
+		6589F1991F0B2B6D001EF00A /* EGOMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOMap.m; sourceTree = "<group>"; };
+		6589F19B1F0B344D001EF00A /* EGOMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGOMapManager.h; sourceTree = "<group>"; };
 		658E56EA1F09E565006093CA /* EGOMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOMapManager.m; sourceTree = "<group>"; };
 		658E570C1F0A2F99006093CA /* RCTConvert+ECoreLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+ECoreLocation.h"; sourceTree = "<group>"; };
 		658E570D1F0A2FC7006093CA /* RCTConvert+EMapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+EMapKit.h"; sourceTree = "<group>"; };
@@ -409,6 +413,7 @@
 		13B07FAE1A68108700A75B9A /* iosNativeUiComponents */ = {
 			isa = PBXGroup;
 			children = (
+				6589F17C1F0B2B39001EF00A /* EGOMap */,
 				658E570B1F0A2E86006093CA /* RCTConvertCategories */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -417,7 +422,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				658E56EA1F09E565006093CA /* EGOMapManager.m */,
 			);
 			name = iosNativeUiComponents;
 			sourceTree = "<group>";
@@ -446,6 +450,17 @@
 				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6589F17C1F0B2B39001EF00A /* EGOMap */ = {
+			isa = PBXGroup;
+			children = (
+				6589F19B1F0B344D001EF00A /* EGOMapManager.h */,
+				658E56EA1F09E565006093CA /* EGOMapManager.m */,
+				6589F1981F0B2B5B001EF00A /* EGOMap.h */,
+				6589F1991F0B2B6D001EF00A /* EGOMap.m */,
+			);
+			name = EGOMap;
 			sourceTree = "<group>";
 		};
 		658E570B1F0A2E86006093CA /* RCTConvertCategories */ = {
@@ -957,6 +972,7 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				658E570F1F0A300D006093CA /* RCTConvert+ECoreLocation+EMapkit.m in Sources */,
 				658E56EB1F09E565006093CA /* EGOMapManager.m in Sources */,
+				6589F19A1F0B2B6D001EF00A /* EGOMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,11 +6,12 @@
 
 import React, { Component } from 'react'
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
+	AppRegistry,
+	StyleSheet,
+	Text,
+	View,
+	Dimensions,
+	TouchableOpacity,
 } from 'react-native';
 import MapView from './src/MapView'
 const { height, width } = Dimensions.get('window')
@@ -22,13 +23,25 @@ export default class iosNativeUiComponents extends Component {
 		latitudeDelta: 0.1,
 		longitudeDelta: 0.1,
 	}
-  render() {
-    return (
-      <View style={styles.container}>
-        <MapView style={styles.map} pitchEnabled={false} region={iosNativeUiComponents.region} />
-      </View>
-    );
-  }
+
+	onRegionChange(event){
+		console.log(event)
+	}
+
+	render() {
+		return (
+			<View style={styles.container}>
+				<TouchableOpacity style={styles.button} onPress={()=>{alert("aa")}}>
+					<Text style={styles.txt}>Open The Webview</Text>
+				</TouchableOpacity>
+				<MapView
+					style={styles.map}
+					pitchEnabled={false}
+					region={iosNativeUiComponents.region}
+					onChange={this.onRegionChange} />
+			</View>
+		)
+	}
 }
 
 const styles = StyleSheet.create({
@@ -38,11 +51,19 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		backgroundColor: '#F5FCFF',
 	},
+	button: {
+		height: 200,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	txt: {
+		fontSize: 26,
+		color: "#0000dd",
+	},
 	map: {
-		// flex: 1,
-		height: height,
+		height: height-200,
 		width: width,
 	},
 });
 
-AppRegistry.registerComponent('iosNativeUiComponents', () => iosNativeUiComponents);
+AppRegistry.registerComponent('iosNativeUiComponents', () => iosNativeUiComponents)

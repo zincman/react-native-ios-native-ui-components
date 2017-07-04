@@ -5,12 +5,12 @@ import { requireNativeComponent } from 'react-native'
 class MapView extends React.Component {
 	static propTypes = {
 		/**
-		  * When this property is set to `true` and a valid camera is associated
-		  * with the map, the camera’s pitch angle is used to tilt the plane
-		  * of the map. When this property is set to `false`, the camera’s pitch
-		  * angle is ignored and the map is always displayed as if the user
-		  * is looking straight down onto it.
-		  */
+		 * When this property is set to `true` and a valid camera is associated
+		 * with the map, the camera’s pitch angle is used to tilt the plane
+		 * of the map. When this property is set to `false`, the camera’s pitch
+		 * angle is ignored and the map is always displayed as if the user
+		 * is looking straight down onto it.
+		 */
 		pitchEnabled: PropTypes.bool,
 
 		/**
@@ -33,10 +33,25 @@ class MapView extends React.Component {
 			latitudeDelta: PropTypes.number.isRequired,
 			longitudeDelta: PropTypes.number.isRequired,
 		}),
+		/**
+		 * Callback that is called continuously when the user is dragging the map.
+		 */
+		onChange: PropTypes.func,
+	}
+
+	constructor(props){
+		super(props)
+		this._onChange = this._onChange.bind(this)
+	}
+
+	_onChange(event){
+		let {onChange} = this.props
+		if(!onChange){ return }
+		onChange(event.nativeEvent)
 	}
 
 	render () {
-		return <EGOMap {...this.props} />
+		return <EGOMap {...this.props} onChange={this._onChange}/>
 	}
 }
 
