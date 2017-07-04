@@ -31,9 +31,9 @@ export default class iosNativeUiComponents extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<TouchableOpacity style={styles.button} onPress={()=>{alert("aa")}}>
+				{/* <TouchableOpacity style={styles.button} onPress={()=>{alert("aa")}}>
 					<Text style={styles.txt}>Open The Webview</Text>
-				</TouchableOpacity>
+				</TouchableOpacity> */}
 				<MapView
 					style={styles.map}
 					pitchEnabled={false}
