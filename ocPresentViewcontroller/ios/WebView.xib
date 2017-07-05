@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController">
+            <connections>
+                <outlet property="contentView" destination="zg6-V0-vpe" id="cXz-VA-bxd"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wkM-so-lHM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-8g-FzQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="团购" id="N6x-Qm-lSk"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg6-V0-vpe">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LVT-8g-FzQ" secondAttribute="trailing" id="0tj-m6-Lim"/>
+                <constraint firstItem="zg6-V0-vpe" firstAttribute="top" secondItem="LVT-8g-FzQ" secondAttribute="bottom" id="1Yi-uN-jr1"/>
+                <constraint firstItem="LVT-8g-FzQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9A2-oB-PjX"/>
+                <constraint firstAttribute="bottom" secondItem="zg6-V0-vpe" secondAttribute="bottom" id="GEU-zj-0IQ"/>
+                <constraint firstItem="LVT-8g-FzQ" firstAttribute="leading" secondItem="zg6-V0-vpe" secondAttribute="leading" id="Lod-rH-Xf5"/>
+                <constraint firstItem="LVT-8g-FzQ" firstAttribute="trailing" secondItem="zg6-V0-vpe" secondAttribute="trailing" id="sfo-Yc-oYt"/>
+                <constraint firstItem="LVT-8g-FzQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uUg-Y3-CrZ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="-144.5" y="-20.5"/>
+        </view>
+    </objects>
+</document>

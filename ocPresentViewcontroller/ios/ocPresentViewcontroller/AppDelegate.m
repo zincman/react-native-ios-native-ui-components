@@ -12,6 +12,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+#import "WebViewController.h"
+
 @implementation AppDelegate
 RCT_EXPORT_MODULE()
 
@@ -36,9 +38,11 @@ RCT_EXPORT_MODULE()
 }
 
 RCT_EXPORT_METHOD(pushWebView){
-  UIViewController *newVc = [[UIViewController alloc] initWithNibName:@"new vc" bundle:nil];
+  WebViewController *newVc = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+//  WebViewController *wvCntlr = [[WebViewController alloc] init];
+//  UINavigationController *ngCntlr = [[UINavigationController alloc] initWithRootViewController: wvCntlr];
+  
   [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:newVc animated:YES completion:nil];
-  NSLog(@"Open a Webview");
 }
 
 @end
